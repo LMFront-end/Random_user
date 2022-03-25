@@ -1,5 +1,6 @@
 package com.example.userwebflux.domain.collection;
 
+import com.example.userwebflux.domain.valueObject.ConnectionStatus;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -15,5 +16,6 @@ public class User {
 
     private final String userName;
     private final LocalDate timeStamp;
+    private final ConnectionStatus connectionStatus;
 
 }
