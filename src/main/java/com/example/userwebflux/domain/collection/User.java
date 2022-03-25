@@ -14,6 +14,6 @@ public class User {
     private final String id;
 
     private final String userName;
-    private final LocalDate timestamp;
+    private final LocalDate timeStamp;
 
 }
