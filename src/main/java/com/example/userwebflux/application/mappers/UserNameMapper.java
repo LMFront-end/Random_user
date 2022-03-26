@@ -14,12 +14,24 @@ public class UserNameMapper {
     private final RandomStringGenerator randomStringGenerator = new RandomStringGenerator();
 
     public Function<UserName, UserNameDto> mapToDto(){
-        return userName -> new UserNameDto(userName.getId(),
-                userName.getValue(),
+        return userName -> new UserNameDto(
+                userName.getId(),
+                userName.getUserName(),
+                userName.getUserEmail(),
+                userName.getUserWasBorn(),
+                userName.getUserPhone(),
+                userName.getUserPassword(),
                 userName.getTimeStamp());
     }
 
-    public Function<String, UserName> mapToNewCollection(){
-        return userName -> new UserName(null, userName, LocalDate.now());
+    public Function<UserNameDto, UserName> mapToNewCollection(){
+        return userName -> new UserName(
+                userName.getId(),
+                userName.getUserName(),
+                userName.getUserEmail(),
+                userName.getUserWasBorn(),
+                userName.getUserPhone(),
+                userName.getUserPassword(),
+                LocalDate.now());
     }
 }

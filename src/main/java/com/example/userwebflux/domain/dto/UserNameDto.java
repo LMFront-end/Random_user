@@ -15,7 +15,11 @@ public class UserNameDto {
     private String id;
 
     @NotBlank
-    private String value;
+    private String userName;
+    private String userEmail;
+    private String userWasBorn;
+    private String userPhone;
+    private String userPassword;
     private LocalDate timeStamp;
 
 }
