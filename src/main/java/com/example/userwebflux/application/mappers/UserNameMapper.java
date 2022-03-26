@@ -1,4 +1,4 @@
 package com.example.userwebflux.application.mappers;
 
-public class UserMapper {
+public class UserNameMapper {
 }
