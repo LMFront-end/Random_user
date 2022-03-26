@@ -89,6 +89,12 @@ _Resource query controllers_
 
 ![prueba 1](./img.png)
 
+
+
+https://user-images.githubusercontent.com/86454777/160233416-4594f99e-3568-4e34-8135-790d0e0ed9ef.mp4
+
+
+
 ## Autora ✒️
 * **Lina Maria Guerrero** - *Random user* - [LMFront-end](https://github.com/LMFront-end)
 
