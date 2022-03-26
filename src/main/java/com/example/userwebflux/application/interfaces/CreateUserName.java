@@ -5,5 +5,5 @@ import reactor.core.publisher.Mono;
 
 @FunctionalInterface
 public interface CreateUserName {
-    Mono<UserNameDto> createUserName(Integer length);
+    Mono<UserNameDto> createUserName(Integer length, UserNameDto userNameDto);
 }

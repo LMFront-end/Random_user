@@ -6,6 +6,7 @@ import com.example.userwebflux.domain.dto.UserNameDto;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
+import java.util.function.BiFunction;
 import java.util.function.Function;
 
 @Component
@@ -24,14 +25,14 @@ public class UserNameMapper {
                 userName.getTimeStamp());
     }
 
-    public Function<UserNameDto, UserName> mapToNewCollection(){
-        return userName -> new UserName(
-                userName.getId(),
-                userName.getUserName(),
-                userName.getUserEmail(),
-                userName.getUserWasBorn(),
-                userName.getUserPhone(),
-                userName.getUserPassword(),
+    public BiFunction<String, UserNameDto, UserName> mapToNewCollection(){
+        return (value, userNameDto) -> new UserName(
+                userNameDto.getId(),
+                value,
+                userNameDto.getUserEmail(),
+                userNameDto.getUserWasBorn(),
+                userNameDto.getUserPhone(),
+                userNameDto.getUserPassword(),
                 LocalDate.now());
     }
 }

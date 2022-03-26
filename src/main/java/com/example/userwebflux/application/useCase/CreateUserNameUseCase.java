@@ -18,10 +18,10 @@ public class CreateUserNameUseCase implements CreateUserName {
     private final RandomStringGenerator randomStringGenerator;
 
     @Override
-    public Mono<UserNameDto> createUserName(Integer length) {
+    public Mono<UserNameDto> createUserName(Integer length, UserNameDto userNameDto) {
         return userNameRepository
                 .save(userNameMapper.mapToNewCollection()
-                        .apply(randomStringGenerator.generateString(length)))
+                        .apply(randomStringGenerator.generateString(length), userNameDto))
                 .map(userNameMapper.mapToDto());
     }
 }
