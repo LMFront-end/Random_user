@@ -9,13 +9,11 @@ import java.time.LocalDate;
 
 @Data
 @Document(value = "users")
-public class User {
+public class UserName {
 
     @Id
     private final String id;
 
-    private final String userName;
+    private final String value;
     private final LocalDate timeStamp;
-    private final ConnectionStatus connectionStatus;
-
 }

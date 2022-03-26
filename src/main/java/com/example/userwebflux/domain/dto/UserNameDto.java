@@ -11,13 +11,12 @@ import java.time.LocalDate;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserDTO {
+public class UserNameDto {
 
     private String id;
 
     @NotBlank
-    private String userName;
-
+    private String value;
     private LocalDate timeStamp;
-    private ConnectionStatus connectionStatus;
+
 }
