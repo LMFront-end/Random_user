@@ -1,6 +1,5 @@
 package com.example.userwebflux.domain.dto;
 
-import com.example.userwebflux.domain.valueObject.ConnectionStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
